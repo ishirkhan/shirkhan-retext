@@ -6,11 +6,11 @@ import {
   khanToUgPlugin,
 } from "./lib";
 
-const result = unified()
+const processor = unified()
   .use(shirkhanParser)
   .use(toKhanPlugin)
   .use(khanToUgPlugin)
-  .use(shirkhanCompiler)
-  .processSync("shirkhan /hello world/ deydughu 123");
+  .use(shirkhanCompiler);
 
+const result = processor.processSync("shirkhan /hello world/ deydughu 123");
 console.log("result", result.toString());

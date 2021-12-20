@@ -1,19 +1,25 @@
-# 计划
+# 使用方式
 
-## Bug
+```javascript
+import { unified } from "unified";
+import {
+  shirkhanParser,
+  shirkhanCompiler,
+  toKhanPlugin,
+  khanToUgPlugin,
+} from "./shirkhan-retext";
 
-## 开发
+const processor = unified()
+  .use(shirkhanParser)
+  .use(toKhanPlugin)
+  .use(khanToUgPlugin)
+  .use(shirkhanCompiler);
 
-- 启动本地开发环境
+const result = processor.processSync("shirkhan /hello world/ deydughu 123");
+console.log("result", result.toString());
+```
 
-  > yarn start
-
-## 编译
-
-- `
-  > yarn build
-
-## 测试
-
-- `
-  > yarn test
+```bash
+// out
+result شىرخان /hello world/ دەيدۇغۇ 123
+```
