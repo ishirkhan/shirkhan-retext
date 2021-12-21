@@ -12,7 +12,7 @@ function converUgCharToKhan(node, index, parent) {
   const preNode = parent.children[index - 1];
 
   // 处理hemze
-  if (preNode?.value === " " && node.value === "x") {
+  if ((preNode?.value === " " || !preNode) && node.value === "x") {
     node.value = ""; // 单词首位的hemze被清理
   }
 
@@ -48,10 +48,10 @@ export function ugToKhan() {
       }
 
       // 当遍历了所有，转换模式还没停止的话停掉它
-      // if (convertStatus && index === parent.children.length - 1) {
-      //   convertStatus = false;
-      //   node.value = node.value + "/";
-      // }
+      if (convertStatus && index === parent.children.length - 1) {
+        convertStatus = false;
+        node.value = node.value + "/";
+      }
     });
   };
 }

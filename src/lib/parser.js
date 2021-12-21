@@ -22,7 +22,7 @@ export function baseParser(...params) {
       children: Array.from(value).map((char) => {
         return {
           type: "CharNode",
-          value: char,
+          value: char.toLocaleLowerCase(),
           ascii: isAscii(char),
           asciiAZ: isAsciiAZ(char),
           punctuation: isPunctuation(char),

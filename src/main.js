@@ -7,7 +7,7 @@ import {
   ugToKhanPlugin,
 } from "./lib";
 
-const targetText = "shirkhan /hello world 123/ deydughu ";
+const targetText = "shirkhan /hello world/ 123 deydughu ";
 
 // khan to ug
 let processor = unified()
