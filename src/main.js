@@ -4,13 +4,26 @@ import {
   shirkhanCompiler,
   toKhanPlugin,
   khanToUgPlugin,
+  ugToKhanPlugin,
 } from "./lib";
 
-const processor = unified()
+const targetText = "shirkhan /hello world/ deydughu 123";
+
+// khan to ug
+let processor = unified()
   .use(shirkhanParser)
   .use(toKhanPlugin)
   .use(khanToUgPlugin)
   .use(shirkhanCompiler);
 
-const result = processor.processSync("shirkhan /hello world/ deydughu 123");
+let result = processor.processSync(targetText);
+console.log("result", result.toString());
+
+// ug to khan
+processor = unified()
+  .use(shirkhanParser)
+  .use(ugToKhanPlugin)
+  .use(shirkhanCompiler);
+
+result = processor.processSync(result);
 console.log("result", result.toString());

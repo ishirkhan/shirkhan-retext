@@ -7,19 +7,27 @@ import {
   shirkhanCompiler,
   toKhanPlugin,
   khanToUgPlugin,
-} from "./shirkhan-retext";
+  ugToKhanPlugin,
+} from "shirkhan-retext";
 
-const processor = unified()
+const targetText = "shirkhan /hello world/ deydughu 123";
+
+// khan to ug
+let processor = unified()
   .use(shirkhanParser)
   .use(toKhanPlugin)
   .use(khanToUgPlugin)
   .use(shirkhanCompiler);
 
-const result = processor.processSync("shirkhan /hello world/ deydughu 123");
+let result = processor.processSync(targetText);
 console.log("result", result.toString());
-```
 
-```bash
-// out
-result شىرخان /hello world/ دەيدۇغۇ 123
+// ug to khan
+processor = unified()
+  .use(shirkhanParser)
+  .use(ugToKhanPlugin)
+  .use(shirkhanCompiler);
+
+result = processor.processSync(result);
+console.log("result", result.toString());
 ```

@@ -22,6 +22,7 @@ function regroup(node, index, parent) {
     parent.children.splice(index, 1, {
       ...node,
       value: "",
+      ascii: false,
       asciiAZ: false,
       whiteSpace: true,
     });

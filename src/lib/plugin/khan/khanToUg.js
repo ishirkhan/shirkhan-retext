@@ -9,9 +9,12 @@ const khanMap = getMap({ from: "khan", to: "ug" });
  */
 export function khanToUg() {
   return (tree) => {
-    visit(tree, (node) => {
+    visit(tree, "CharNode", (node) => {
       if (node.convert && node.asciiAZ) {
         node.value = khanMap[node.value];
+      }
+      if (node.value.indexOf("/") >= 0) {
+        node.value = node.value.replace("/", "");
       }
     });
   };
