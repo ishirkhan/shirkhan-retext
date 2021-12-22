@@ -10,7 +10,7 @@ import {
   ugToKhanPlugin,
 } from "shirkhan-retext";
 
-const targetText = "shirkhan /hello world/ deydughu 123";
+const targetText = "shirkhan /hello world/ 123 deydughu ";
 
 // khan to ug
 let processor = unified()

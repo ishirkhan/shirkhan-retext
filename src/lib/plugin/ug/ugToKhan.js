@@ -22,6 +22,7 @@ function converUgCharToKhan(node, index, parent) {
     let i = index;
     while (parent.children[i - 1].value.trim() === "") {
       i = i - 1;
+      if (i < 0) break;
     }
     if (i > 0) {
       parent.children[i].value = "/" + parent.children[i].value;

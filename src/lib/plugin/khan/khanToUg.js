@@ -13,8 +13,12 @@ const HEMZE = getHemze();
 export function khanToUg() {
   return (tree) => {
     visit(tree, "CharNode", (node, index, parent) => {
+      if (node.value === "/") {
+        node.value = node.value.replace("/", "");
+      }
+
       const preNode = parent.children[index - 1];
-      if (node.convert && node.asciiAZ) {
+      if (node.convert) {
         node.value = khanMap[node.value] || node.value;
         // 首字母
         if (
@@ -23,11 +27,6 @@ export function khanToUg() {
         ) {
           node.value = HEMZE + node.value;
         }
-      }
-
-      if (!node.value) return;
-      if (node.value.indexOf("/") >= 0) {
-        node.value = node.value.replace("/", "");
       }
     });
   };
