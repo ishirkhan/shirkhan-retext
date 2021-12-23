@@ -8,10 +8,15 @@ let convertStatus = false;
 
 function converUgCharToKhan(node, index, parent) {
   node.value = ugMap[node.value];
-  node.value = node.value === "nh" ? "n" : node.value;
-  const preNode = parent.children[index - 1];
+
+  //处理 ng
+  const next = parent.children[index + 1];
+  if (node.value === "nh" && next?.value !== "گ") {
+    node.value = "n";
+  }
 
   // 处理hemze
+  const preNode = parent.children[index - 1];
   if ((preNode?.value === " " || !preNode) && node.value === "x") {
     node.value = ""; // 单词首位的hemze被清理
   }
@@ -19,8 +24,10 @@ function converUgCharToKhan(node, index, parent) {
   // 当转换模式开启的话得关闭
   if (convertStatus) {
     convertStatus = false;
+
+    // 找到之前的最后一个字符后面添加结束符
     let i = index;
-    while (parent.children[i - 1].value.trim() === "") {
+    while (parent.children[i - 1]?.asciiAZ === false) {
       i = i - 1;
       if (i < 0) break;
     }
