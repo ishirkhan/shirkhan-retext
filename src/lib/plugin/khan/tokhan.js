@@ -35,6 +35,17 @@ export function toKhan() {
         // 记录删除坐标
         deletePos.push(index - 1);
       }
+      // 处理 ng 字符
+      if (
+        convertStatus &&
+        preNode &&
+        preNode.value === "n" &&
+        node.value === "g"
+      ) {
+        root.children[index].value = preNode.value + node.value;
+        // 记录删除坐标
+        deletePos.push(index - 1);
+      }
     }
 
     // 删除被合并的元素
