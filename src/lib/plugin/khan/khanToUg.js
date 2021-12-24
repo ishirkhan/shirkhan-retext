@@ -22,11 +22,16 @@ export function khanToUg() {
         node.value = khanMap[node.value] || node.value;
         // 首字母
         if (
-          (!preNode || preNode.value === " ") &&
+          (!preNode || preNode.value === " " || preNode.punctuation) &&
           volwes.includes(node.value)
         ) {
           node.value = HEMZE + node.value;
         }
+      }
+
+      // 符号转移
+      if (node.punctuation && node.value === "?") {
+        node.value = "؟";
       }
     });
   };
