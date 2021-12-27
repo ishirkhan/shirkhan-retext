@@ -30,9 +30,10 @@ export function toKhan() {
       node["convert"] = convertStatus;
 
       // 处理 h 字符
-      if (convertStatus && node.value === "h") {
-        root.children[index].value = preNode.value + "h";
+      if (convertStatus && node.value === "h" && preNode.value.length === 1) {
+        node.value = preNode.value + "h";
         // 记录删除坐标
+        preNode.value = "";
         deletePos.push(index - 1);
       }
       // 处理 ng 字符
@@ -42,8 +43,9 @@ export function toKhan() {
         preNode.value === "n" &&
         node.value === "g"
       ) {
-        root.children[index].value = preNode.value + node.value;
+        node.value = preNode.value + node.value;
         // 记录删除坐标
+        preNode.value = "";
         deletePos.push(index - 1);
       }
     }
