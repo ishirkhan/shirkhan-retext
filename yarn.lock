@@ -3318,10 +3318,10 @@ shebang-regex@^3.0.0:
   resolved "https://registry.nlark.com/shebang-regex/download/shebang-regex-3.0.0.tgz?cache=0&sync_timestamp=1628896660639&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fshebang-regex%2Fdownload%2Fshebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI=
 
-shirkhan-alphabet-table@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.npmmirror.com/shirkhan-alphabet-table/download/shirkhan-alphabet-table-0.0.9.tgz#7287edbc71daa4f39c525a789d56a879f500ad94"
-  integrity sha512-6nWhc7z4NUWL8M9iueAbVGQ1bVx8uW1CqCu/YKKOcVo6H0xRLs5h4M803aeo5f7szC1tHxNEcHHL6ZvDl89zXg==
+shirkhan-alphabet-table@^1.x:
+  version "1.1.0"
+  resolved "https://registry.npmmirror.com/shirkhan-alphabet-table/download/shirkhan-alphabet-table-1.1.0.tgz#bf74ecd4597691bd7717fc6c5d81cec851f51509"
+  integrity sha512-TpuHExQ2MBpgSacr/4tb5qUSbshrJ2GNkaujbBH8mbMwpmrs9daL4yLaSNAF4HV6xYlwESf8cjTRP9d70vbhIg==
 
 signal-exit@^3.0.2, signal-exit@^3.0.3:
   version "3.0.6"

@@ -13,7 +13,7 @@
     }
   },
   "scripts": {
-    "start": "rm -rf node_modules/.vite && vite",
+    "start": "rm -rf node_modules/.vite && vite --force",
     "prebuild": "yarn test",
     "build": "vite build",
     "test": "jest --config=jest.config.js"
@@ -35,7 +35,7 @@
   "dependencies": {
     "nlcst-to-string": "^3.1.0",
     "parse-latin": "^5.0.0",
-    "shirkhan-alphabet-table": "^0.0.9",
+    "shirkhan-alphabet-table": "^1.x",
     "typescript": "4.4.4",
     "unified": "^10.1.1",
     "unist-util-modify-children": "^3.0.0",

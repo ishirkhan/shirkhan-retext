@@ -48,11 +48,6 @@ export function ugToKhan() {
         return;
       }
 
-      // 处理符号
-      if (node.punctuation && node.value === "؟") {
-        node.value = "?";
-      }
-
       // 遇到第一个非母语的拉丁字符就开始转
       if (node.asciiAZ && !convertStatus) {
         convertStatus = true;

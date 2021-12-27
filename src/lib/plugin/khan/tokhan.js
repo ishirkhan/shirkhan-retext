@@ -23,8 +23,8 @@ export function toKhan() {
         convertStatus = !convertStatus;
         continue;
       }
-      // 转换
-      if (!node.asciiAZ) continue;
+      // 忽略非符号，非a-z字母
+      if (!node.asciiAZ && !node.punctuation) continue;
 
       // 补充转换状态
       node["convert"] = convertStatus;

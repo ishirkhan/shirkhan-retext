@@ -2,7 +2,7 @@ import { visit } from "unist-util-visit";
 import { getMap, getVolwes, getHemze } from "../../utils/table";
 
 const khanMap = getMap({ from: "khan", to: "ug" });
-const volwes = getVolwes();
+const volwes = getVolwes().map((item) => item.ug);
 
 const HEMZE = getHemze();
 
@@ -27,11 +27,6 @@ export function khanToUg() {
         ) {
           node.value = HEMZE + node.value;
         }
-      }
-
-      // 符号转移
-      if (node.punctuation && node.value === "?") {
-        node.value = "؟";
       }
     });
   };
