@@ -36,6 +36,11 @@ export function toKhan() {
         preNode.value = "";
         deletePos.push(index - 1);
       }
+      // 处理 ngh => n+gh ，not ng+h
+      if (convertStatus && node.value === "h" && preNode.value === "ng") {
+        preNode.value = "n";
+        node.value = "gh";
+      }
       // 处理 ng 字符
       if (
         convertStatus &&

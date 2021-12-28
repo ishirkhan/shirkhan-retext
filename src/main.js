@@ -8,7 +8,7 @@ import {
 } from "./lib";
 
 const targetText =
-  "shirkhanning awazi ni vnhge ehlish vchvn /hello , world/ 123, dep yezish kehrek mu?";
+  "shirkhanning awazi ni vnhge ehlish vchvn /hello , world/ 123, din bashlanghan geplerni dep yezish kehrek mu?";
 
 // khan to ug
 let processor = unified()
