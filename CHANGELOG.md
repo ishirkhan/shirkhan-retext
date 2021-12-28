@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.9](https://gitee.com/silvaq/shirkhan-retext/compare/v1.0.8...v1.0.9) (2021-12-28)
+
+
+### Features
+
+* 发布版本的自动发布线上逻辑去掉,使得确认所有条件成立后再发布到线上,避免误操作带来的麻烦 ([b3b9bdf](https://gitee.com/silvaq/shirkhan-retext/commit/b3b9bdf0c53ba367fbea6738e85a3581cafd5598))
+
+
+### Bug Fixes
+
+* 修复因preNode是undefine导致的异常 ([0f0864a](https://gitee.com/silvaq/shirkhan-retext/commit/0f0864a134504ee4b5a669327b4296c7ee326d67))
+
 ### [1.0.8](https://gitee.com/silvaq/shirkhan-retext/compare/v1.0.7...v1.0.8) (2021-12-28)
 
 ### 1.0.7 (2021-12-28)
