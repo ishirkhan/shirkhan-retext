@@ -30,14 +30,24 @@ export function toKhan() {
       node["convert"] = convertStatus;
 
       // 处理 h 字符
-      if (convertStatus && node.value === "h" && preNode.value.length === 1) {
+      if (
+        convertStatus &&
+        node.value === "h" &&
+        preNode &&
+        preNode.value?.length === 1
+      ) {
         node.value = preNode.value + "h";
         // 记录删除坐标
         preNode.value = "";
         deletePos.push(index - 1);
       }
       // 处理 ngh => n+gh ，not ng+h
-      if (convertStatus && node.value === "h" && preNode.value === "ng") {
+      if (
+        convertStatus &&
+        node.value === "h" &&
+        preNode &&
+        preNode?.value === "ng"
+      ) {
         preNode.value = "n";
         node.value = "gh";
       }
