@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://gitee.com/silvaq/shirkhan-retext/compare/v1.0.9...v1.1.0) (2021-12-29)
+
+
+### Features
+
+* 修复ug转shirkhan 的时候hemze前面出现符号时没有被去掉问题,保留两个processor ([048f9fc](https://gitee.com/silvaq/shirkhan-retext/commit/048f9fc7ad4a67cdaa53671ec0f6f6a5223c7f1f))
+
 ### [1.0.9](https://gitee.com/silvaq/shirkhan-retext/compare/v1.0.8...v1.0.9) (2021-12-28)
 
 
