@@ -55,7 +55,6 @@ export function ugToKhan() {
       if (node.asciiAZ && !convertStatus) {
         convertStatus = true;
         node.value = "/" + node.value;
-        return;
       }
 
       // 当遍历了所有，转换模式还没停止的话停掉它
