@@ -19,7 +19,7 @@ import {
   shirkhanToUgProcessor,
   ugToShirkhanProcessor,
   shirkhanStringify,
-} from "./lib";
+} from "shirkhan-retext";
 
 const targetText =
   "shirkhanning awazi ni vnhge ehlish vchvn /hello , world/ 123, din bashlanghan geplerni dep yezish kehrek mu?";

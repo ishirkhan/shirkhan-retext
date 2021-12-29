@@ -4,8 +4,7 @@ import {
   shirkhanStringify,
 } from "./lib";
 
-const targetText =
-  "shirkhanning awazi ni vnhge ehlish vchvn /hello , world/ 123, din bashlanghan geplerni dep yezish kehrek mu?";
+const targetText = "ademh";
 
 // khan to ug
 let result = shirkhanToUgProcessor()
