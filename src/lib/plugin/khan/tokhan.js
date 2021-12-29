@@ -1,6 +1,11 @@
 export { toKhan as toKhanPlugin } from "./tokhan";
 export { khanToUg as khanToUgPlugin } from "./khanToUg";
 import { TRANSLATIONAL_MARK } from "shirkhan-alphabet-table";
+import { getTable } from "../../utils/table";
+
+const doubleCharacter = getTable()
+  .map((item) => item.khan)
+  .filter((item) => item.length === 2);
 
 /**
  * 处理需要组合的字符，如 sh,kh
@@ -34,7 +39,8 @@ export function toKhan() {
         convertStatus &&
         node.value === "h" &&
         preNode &&
-        preNode.value?.length === 1
+        preNode.value?.length === 1 &&
+        doubleCharacter.includes(preNode?.value + "h") // 排除单独出现的h被前一个字符合并导致前一个字符无法正确转换
       ) {
         node.value = preNode.value + "h";
         // 记录删除坐标
