@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://gitee.com/silvaq/shirkhan-retext/compare/v1.2.0...v1.3.0) (2021-12-29)
+
+
+### Features
+
+* 新增了目前为止遇到过的所有情况的测试用例 ([8553f7b](https://gitee.com/silvaq/shirkhan-retext/commit/8553f7bada7072fea73fbcad947c9066f4a5f7a9))
+
+
+### Bug Fixes
+
+* 修复h和非双字符的字符一起出现时h前面的字符一起被忽略转移 ([125626a](https://gitee.com/silvaq/shirkhan-retext/commit/125626a4828f7a63265f63c05f58a28154531ab2))
+* 修复ug to khan 时单词 ademh 变成adem/h ,缺少关闭终止符问题 ([5c9152b](https://gitee.com/silvaq/shirkhan-retext/commit/5c9152b5f94df8172abc74d79722857be5c755ea))
+
 ## [1.2.0](https://gitee.com/silvaq/shirkhan-retext/compare/v1.1.0...v1.2.0) (2021-12-29)
 
 ## [1.1.0](https://gitee.com/silvaq/shirkhan-retext/compare/v1.0.9...v1.1.0) (2021-12-29)
