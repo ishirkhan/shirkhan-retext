@@ -1,30 +1,18 @@
-import { unified } from "unified";
 import {
-  shirkhanParser,
-  shirkhanCompiler,
-  toKhanPlugin,
-  khanToUgPlugin,
-  ugToKhanPlugin,
+  shirkhanToUgProcessor,
+  ugToShirkhanProcessor,
+  shirkhanStringify,
 } from "./lib";
 
 const targetText =
   "shirkhanning awazi ni vnhge ehlish vchvn /hello , world/ 123, din bashlanghan geplerni dep yezish kehrek mu?";
 
 // khan to ug
-let processor = unified()
-  .use(shirkhanParser)
-  .use(toKhanPlugin)
-  .use(khanToUgPlugin)
-  .use(shirkhanCompiler);
-
-let result = processor.processSync(targetText);
+let result = shirkhanToUgProcessor()
+  .use(shirkhanStringify)
+  .processSync(targetText);
 console.log("result", result.toString());
 
 // ug to khan
-processor = unified()
-  .use(shirkhanParser)
-  .use(ugToKhanPlugin)
-  .use(shirkhanCompiler);
-
-result = processor.processSync(result);
+result = ugToShirkhanProcessor().use(shirkhanStringify).processSync(result);
 console.log("result", result.toString());

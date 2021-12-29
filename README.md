@@ -1,33 +1,37 @@
+# 简介
+
+本项目是遵守 [shirkhan-alphabet](https://gitee.com/silvaq/shirkhan-alphabet) 所规定的规则规矩提供文本转换功能
+
+# 安装
+
+yarn:
+
+`yarn add shirkhan-retext`
+
+npm:
+
+`npm install shirkhan-retext`
+
 # 使用方式
 
 ```javascript
-import { unified } from "unified";
 import {
-  shirkhanParser,
-  shirkhanCompiler,
-  toKhanPlugin,
-  khanToUgPlugin,
-  ugToKhanPlugin,
-} from "shirkhan-retext";
+  shirkhanToUgProcessor,
+  ugToShirkhanProcessor,
+  shirkhanStringify,
+} from "./lib";
 
-const targetText = "shirkhan /hello world/ 123 deydughu ";
+const targetText =
+  "shirkhanning awazi ni vnhge ehlish vchvn /hello , world/ 123, din bashlanghan geplerni dep yezish kehrek mu?";
 
 // khan to ug
-let processor = unified()
-  .use(shirkhanParser)
-  .use(toKhanPlugin)
-  .use(khanToUgPlugin)
-  .use(shirkhanCompiler);
+let result = shirkhanToUgProcessor()
+  .use(shirkhanStringify)
+  .processSync(targetText);
 
-let result = processor.processSync(targetText);
 console.log("result", result.toString());
 
 // ug to khan
-processor = unified()
-  .use(shirkhanParser)
-  .use(ugToKhanPlugin)
-  .use(shirkhanCompiler);
-
-result = processor.processSync(result);
+result = ugToShirkhanProcessor().use(shirkhanStringify).processSync(result);
 console.log("result", result.toString());
 ```

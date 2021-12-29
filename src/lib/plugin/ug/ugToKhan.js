@@ -17,7 +17,10 @@ function converUgCharToKhan(node, index, parent) {
 
   // 处理hemze
   const preNode = parent.children[index - 1];
-  if ((preNode?.value === " " || !preNode) && node.value === "x") {
+  if (
+    (preNode?.value === " " || !preNode || preNode?.punctuation) &&
+    node.value === "x"
+  ) {
     node.value = ""; // 单词首位的hemze被清理
   }
 
