@@ -1,5 +1,4 @@
 export { toKhan as toKhanPlugin } from "./tokhan";
-export { khanToUg as khanToUgPlugin } from "./khanToUg";
 import { TRANSLATIONAL_MARK } from "shirkhan-alphabet-table";
 import { getTable } from "../../utils/table";
 

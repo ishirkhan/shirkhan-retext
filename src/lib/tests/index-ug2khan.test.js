@@ -1,4 +1,4 @@
-import { ugToShirkhanProcessor, shirkhanStringify } from "./index";
+import { ugToShirkhanProcessor, shirkhanStringify } from "../index";
 
 // ug to khan
 const toKhan = (text) =>

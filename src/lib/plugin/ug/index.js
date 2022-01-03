@@ -1,1 +1,1 @@
-export { ugToKhan as ugToKhanPlugin } from "./ugToKhan";
+export { ugToKhanUz as ugToKhanUzPlugin } from "./toKhanUz";

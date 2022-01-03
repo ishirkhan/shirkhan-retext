@@ -1,24 +1,22 @@
 import { visit } from "unist-util-visit";
 import { getMap } from "../../utils/table";
 
-const ugMap = getMap({ from: "ug", to: "khan" });
+const ugMap = getMap({ from: "ug", to: "khanUz" });
 const ugChars = Object.keys(ugMap);
 
 let convertStatus = false;
 
-function converUgCharToKhan(node, index, parent) {
+function converUgCharToKhanUz(node, index, parent) {
   node.value = ugMap[node.value];
-
-  //处理 ng
-  const next = parent.children[index + 1];
-  if (node.value === "nh" && next?.value !== "گ") {
-    node.value = "n";
-  }
+  node.convert = !convertStatus;
 
   // 处理hemze
   const preNode = parent.children[index - 1];
   if (
-    (preNode?.value === " " || !preNode || preNode?.punctuation) &&
+    (preNode?.value === " " ||
+      !preNode ||
+      preNode?.punctuation ||
+      preNode.whiteSpace) &&
     node.value === "x"
   ) {
     node.value = ""; // 单词首位的hemze被清理
@@ -40,14 +38,16 @@ function converUgCharToKhan(node, index, parent) {
   }
 }
 /**
- * 母语字母转换成 khan
+ * 母语字母转换成 khan-uz
  * @returns
  */
-export function ugToKhan() {
+export function ugToKhanUz() {
   return (tree) => {
     visit(tree, "CharNode", (node, index, parent) => {
+      node.convert = convertStatus;
       if (ugChars.includes(node.value)) {
-        converUgCharToKhan(node, index, parent);
+        //给每一个字符补充是否转换的标记
+        converUgCharToKhanUz(node, index, parent);
         return;
       }
 
