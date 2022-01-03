@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://gitee.com/silvaq/shirkhan-retext/compare/v1.3.0...v1.4.0) (2022-01-03)
+
+
+### Features
+
+* 新增shirkhan-uz的支持,所有转换调整成都通过shirkhan-uz中间层来互换 ([168b0c5](https://gitee.com/silvaq/shirkhan-retext/commit/168b0c55df689b14561c0968b0136fdf9eb50e9c))
+
 ## [1.3.0](https://gitee.com/silvaq/shirkhan-retext/compare/v1.2.0...v1.3.0) (2021-12-29)
 
 
