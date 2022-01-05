@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://gitee.com/silvaq/shirkhan-retext/compare/v1.5.0...v1.6.0) (2022-01-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* 按照alphabet-table v1.5的调整进行调整,测试用例更新
+
+### Features
+
+* 按照alphabet-table v1.5的调整进行调整,测试用例更新 ([8166019](https://gitee.com/silvaq/shirkhan-retext/commit/8166019736d8b63e9180a31ecbdaa17f021a6d95))
+
+
+### Bug Fixes
+
+* 修复khan-uz的ħ 字符母语转换显示不正常问题 ([f42b0bd](https://gitee.com/silvaq/shirkhan-retext/commit/f42b0bd8e2e4c14d88bdd2d0fd29071e99d8ae88))
+* 当khan内容包含khan-uz的字符时转换失败问题修复 ([a314b6b](https://gitee.com/silvaq/shirkhan-retext/commit/a314b6bb7e658a7faa941c3420404a9b74cbe707))
+
 ## [1.5.0](https://gitee.com/silvaq/shirkhan-retext/compare/v1.4.0...v1.5.0) (2022-01-05)
 
 
