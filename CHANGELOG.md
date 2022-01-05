@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.2](https://gitee.com/silvaq/shirkhan-retext/compare/v1.6.1...v1.6.2) (2022-01-05)
+
+
+### Bug Fixes
+
+* 修复ĵ无法正确识别问题 ([00413d5](https://gitee.com/silvaq/shirkhan-retext/commit/00413d50cbf803f64a720947aae68c28de4db13c))
+
 ### [1.6.1](https://gitee.com/silvaq/shirkhan-retext/compare/v1.6.0...v1.6.1) (2022-01-05)
 
 ## [1.6.0](https://gitee.com/silvaq/shirkhan-retext/compare/v1.5.0...v1.6.0) (2022-01-05)
