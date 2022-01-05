@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://gitee.com/silvaq/shirkhan-retext/compare/v1.6.0...v1.6.1) (2022-01-05)
+
 ## [1.6.0](https://gitee.com/silvaq/shirkhan-retext/compare/v1.5.0...v1.6.0) (2022-01-05)
 
 
