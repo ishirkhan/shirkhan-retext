@@ -4,8 +4,8 @@ import {
   numerical,
 } from "parse-latin/lib/expressions";
 
-const isAscii = (char) => /[\x00-\xFFêëôöüĉžŝĝñĥ]/.test(char);
-const isAsciiAZ = (char) => /[a-zA-Zêëôöüĉžŝĝñĥ]/.test(char);
+const isAscii = (char) => /[\x00-\xFFêëôöüĉžŝĝñĥħ]/.test(char);
+const isAsciiAZ = (char) => /[a-zA-Zêëôöüĉžŝĝñĥħ]/.test(char);
 const isPunctuation = (char) => punctuation.test(char);
 const isWhiteSpace = (char) => whiteSpace.test(char);
 const isNumber = (char) => numerical.test(char);
