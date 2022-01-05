@@ -6,7 +6,8 @@ import {
   ugToShirkhanUzProcessor,
 } from "./lib";
 
-const targetText = "ŝirhan êlipbesi";
+const targetText =
+  "yakhshimusiz? vzingizni tunushturung! /hello,123/ dehgendek, vnhge alimiz jumu";
 console.log("targetText", targetText);
 
 //khan to uz

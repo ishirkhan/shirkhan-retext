@@ -4117,9 +4117,9 @@ shebang-regex@^3.0.0:
   integrity sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI=
 
 shirkhan-alphabet-table@^1.x:
-  version "1.4.0"
-  resolved "https://registry.npmmirror.com/shirkhan-alphabet-table/download/shirkhan-alphabet-table-1.4.0.tgz#7747b7dcdb4307605da5f8cd1327bee06be09f01"
-  integrity sha512-Ag9gaNNcydLebtvcPDOfNaJeJqxMDPbR7tetyjPktJAaob9sfz/xMoGkWvH9rOjXTsS5ELKR8z6dE0j9tqMj1Q==
+  version "1.5.0"
+  resolved "https://registry.npmmirror.com/shirkhan-alphabet-table/download/shirkhan-alphabet-table-1.5.0.tgz#3d8ce875e5b0807cc65c0d80789a4914536e6968"
+  integrity sha512-93C0B0JmBljiFeoeLCrqEZ61mFoG7olqcyKGIroq8WYFc2q7WGpeFgN7xBssCmSQWvSBsTLAS47dI0Jgecmh2w==
 
 signal-exit@^3.0.2, signal-exit@^3.0.3:
   version "3.0.6"

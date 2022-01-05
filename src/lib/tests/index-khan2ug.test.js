@@ -23,7 +23,7 @@ describe("双字符测试 sh,kh eh,gh,ch,ng,zh,wh", () => {
     },
     {
       name: "wh,zh",
-      expect: toUg("whazirqi zhornal"),
+      expect: toUg("whazirqi jhornal"),
       result: "ھازىرقى ژورنال",
     },
   ];

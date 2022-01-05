@@ -12,7 +12,7 @@ describe("双字符测试 sh,kh eh,gh,ch,ng,zh,wh", () => {
     {
       name: "sh,kh",
       expect: toUz("shirkhan"),
-      result: "ŝirhan",
+      result: "ŝirħan",
     },
     {
       name: "eh,gh",
@@ -26,8 +26,8 @@ describe("双字符测试 sh,kh eh,gh,ch,ng,zh,wh", () => {
     },
     {
       name: "wh,zh",
-      expect: toUz("whazirqi zhornal"),
-      result: "ĥazirqi žornal",
+      expect: toUz("whazirqi jhornal"),
+      result: "ĥazirqi ĵornal",
     },
   ];
 
@@ -41,15 +41,15 @@ describe("双字符测试 sh,kh eh,gh,ch,ng,zh,wh", () => {
 // 只能组词用，不能单独使用,有语义冲突作用
 describe("h 字符规则测试", () => {
   const cases = [
-    // {
-    //   name: "单独出现不做转换",
-    //   expect: toUz("ademh"),
-    //   result: "ademh",
-    // },
+    {
+      name: "单独出现不做转换",
+      expect: toUz("ademh"),
+      result: "ademh",
+    },
     {
       name: "组词作用",
       expect: toUz("shirkhan"),
-      result: "ŝirhan",
+      result: "ŝirħan",
     },
     {
       name: "解决语义冲突作用",
@@ -75,7 +75,7 @@ describe("Hemze 规则测试", () => {
     {
       name: "辅音开头的单词没有hemze",
       expect: toUz("shirkhan"),
-      result: "ŝirhan",
+      result: "ŝirħan",
     },
     {
       name: "元音开头的单词无需加Hemze",
@@ -132,7 +132,7 @@ describe("终止符 '/' 测试", () => {
     {
       name: "终止符包围的内容不做转换",
       expect: toUz("shirkhan /hello world/ deydu"),
-      result: "ŝirhan /hello world/ deydu",
+      result: "ŝirħan /hello world/ deydu",
     },
   ];
 
