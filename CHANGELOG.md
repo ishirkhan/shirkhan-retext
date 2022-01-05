@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://gitee.com/silvaq/shirkhan-retext/compare/v1.4.0...v1.5.0) (2022-01-05)
+
+
+### Features
+
+* 响应alphabet-table 1.4中的khan-uz字符调整,测试用例更新 ([8f45125](https://gitee.com/silvaq/shirkhan-retext/commit/8f4512595dfb2824694210aba31dde694409aa5d))
+
 ## [1.4.0](https://gitee.com/silvaq/shirkhan-retext/compare/v1.3.0...v1.4.0) (2022-01-03)
 
 
