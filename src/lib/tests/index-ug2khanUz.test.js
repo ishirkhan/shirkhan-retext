@@ -8,22 +8,22 @@ describe("双字符测试 sh,kh eh,gh,ch,ng,zh,wh", () => {
     {
       name: "sh,kh",
       expect: toKhanUz("شىرخان"),
-      result: "shirkhan",
+      result: "ŝirhan",
     },
     {
       name: "eh,gh",
       expect: toKhanUz("ئېسىل ئىشلارغا تۇتۇش قىلدۇق"),
-      result: "êsil ishlargha tutush qilduq",
+      result: "êsil iŝlarĝa tutuŝ qilduq",
     },
     {
       name: "ch,ng",
       expect: toKhanUz("چۈشىنىڭ"),
-      result: "chvshiniñ",
+      result: "ĉvŝiniñ",
     },
     {
       name: "wh,zh",
       expect: toKhanUz("ھازىرقى ژورنال"),
-      result: "ĥazirqi zhornal",
+      result: "ĥazirqi žornal",
     },
   ];
 
@@ -45,12 +45,12 @@ describe("h 字符规则测试", () => {
     {
       name: "组词作用",
       expect: toKhanUz("شىرخان"),
-      result: "shirkhan",
+      result: "ŝirhan",
     },
     {
       name: "解决语义冲突作用",
       expect: toKhanUz("ئۈنگە ئېلىش"),
-      result: "vnge êlish",
+      result: "vnge êliŝ",
     },
   ];
 
@@ -71,7 +71,7 @@ describe("Hemze 规则测试", () => {
     {
       name: "辅音开头的单词没有hemze",
       expect: toKhanUz("شىرخان"),
-      result: "shirkhan",
+      result: "ŝirhan",
     },
     {
       name: "元音开头的单词无需加Hemze",
@@ -107,12 +107,12 @@ describe("n g ng gh 语义冲突", () => {
     {
       name: "n g ng",
       expect: toKhanUz("مېنىڭ ئاۋازىمنى ئۈنگە ئالماقچى"),
-      result: "mêniñ awazimni vnge almaqchi",
+      result: "mêniñ awazimni vnge almaqĉi",
     },
     {
       name: "n gh, ngh => n+gh",
       expect: toKhanUz("باشلانغان"),
-      result: "bashlanghan",
+      result: "baŝlanĝan",
     },
   ];
 
@@ -128,7 +128,7 @@ describe("终止符 '/' 测试", () => {
     {
       name: "终止符包围的内容不做转换",
       expect: toKhanUz("شىرخان hello world دەيدۇ"),
-      result: "shirkhan /hello world/ deydu",
+      result: "ŝirhan /hello world/ deydu",
     },
   ];
 

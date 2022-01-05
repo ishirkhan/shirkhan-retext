@@ -12,22 +12,22 @@ describe("双字符测试 sh,kh eh,gh,ch,ng,zh,wh", () => {
     {
       name: "sh,kh",
       expect: toUz("shirkhan"),
-      result: "shirkhan",
+      result: "ŝirhan",
     },
     {
       name: "eh,gh",
       expect: toUz("ehsil ishlargha tutush qilduq"),
-      result: "êsil ishlargha tutush qilduq",
+      result: "êsil iŝlarĝa tutuŝ qilduq",
     },
     {
       name: "ch,ng",
       expect: toUz("chvshining"),
-      result: "chvshiniñ",
+      result: "ĉvŝiniñ",
     },
     {
       name: "wh,zh",
       expect: toUz("whazirqi zhornal"),
-      result: "ĥazirqi zhornal",
+      result: "ĥazirqi žornal",
     },
   ];
 
@@ -41,20 +41,20 @@ describe("双字符测试 sh,kh eh,gh,ch,ng,zh,wh", () => {
 // 只能组词用，不能单独使用,有语义冲突作用
 describe("h 字符规则测试", () => {
   const cases = [
-    {
-      name: "单独出现不做转换",
-      expect: toUz("ademh"),
-      result: "ademh",
-    },
+    // {
+    //   name: "单独出现不做转换",
+    //   expect: toUz("ademh"),
+    //   result: "ademh",
+    // },
     {
       name: "组词作用",
       expect: toUz("shirkhan"),
-      result: "shirkhan",
+      result: "ŝirhan",
     },
     {
       name: "解决语义冲突作用",
       expect: toUz("vnhge ehlish"),
-      result: "vnge êlish",
+      result: "vnge êliŝ",
     },
   ];
 
@@ -75,7 +75,7 @@ describe("Hemze 规则测试", () => {
     {
       name: "辅音开头的单词没有hemze",
       expect: toUz("shirkhan"),
-      result: "shirkhan",
+      result: "ŝirhan",
     },
     {
       name: "元音开头的单词无需加Hemze",
@@ -111,12 +111,12 @@ describe("n g ng gh 语义冲突", () => {
     {
       name: "n g ng",
       expect: toUz("mehning awazimni vnhge almaqchi"),
-      result: "mêniñ awazimni vnge almaqchi",
+      result: "mêniñ awazimni vnge almaqĉi",
     },
     {
       name: "n gh, ngh => n+gh",
       expect: toUz("bashlanghan"),
-      result: "bashlanghan",
+      result: "baŝlanĝan",
     },
   ];
 
@@ -132,7 +132,7 @@ describe("终止符 '/' 测试", () => {
     {
       name: "终止符包围的内容不做转换",
       expect: toUz("shirkhan /hello world/ deydu"),
-      result: "shirkhan /hello world/ deydu",
+      result: "ŝirhan /hello world/ deydu",
     },
   ];
 

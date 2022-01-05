@@ -38,11 +38,12 @@ describe("双字符测试 sh,kh eh,gh,ch,ng,zh,wh", () => {
 // 只能组词用，不能单独使用,有语义冲突作用
 describe("h 字符规则测试", () => {
   const cases = [
-    {
-      name: "单独出现不做转换",
-      expect: toUg("ademh"),
-      result: "ئادەمh",
-    },
+    // 因khan-uz中kh 代表h，这个规则先无效
+    // {
+    //   name: "单独出现不做转换",
+    //   expect: toUg("ademh"),
+    //   result: "ئادەمh",
+    // },
     {
       name: "组词作用",
       expect: toUg("shirkhan"),
